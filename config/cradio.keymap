@@ -128,7 +128,7 @@
             &kp EXCL     &kp AT     &kp HASH         &kp DLLR     &kp PRCNT      &kp CARET      &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
         //├─────-───--──┼──────────┼────────------──┼─────────--─┼──────────┤   ├───────----───┼──────────┼──────────┼──────────┼──────────┤
         //│  "          │  `       │  #             │  ;         │  '       │   │  <           │  _       │  +       │  {       │  }       │
-           &kp LS(SQT)   &kp GRAVE &kp LT(SEMICOLON) &kp SEMICOLON &kp SQT       &kp LT(COMMA)  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC
+           &kp LS(SQT)   &kp GRAVE &kp COLON         &kp SEMICOLON &kp SQT       &kp LT(COMMA)  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC
         //├─────────--─-┼──────────┼─────────------─┼────────--──┼──────────┤   ├─────────----─┼──────────┼──────────┼──────────┼──────────┤
         //│  ~          │ \        │  "|"           │ ?          │ /        │   │  >           │  -       │  =       │  [       │  ]       │
            &kp LT(GRAVE) &kp BSLH   &kp PIPE         &kp LS(FSLH) &kp FSLH       &kp LT(DOT)    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT
