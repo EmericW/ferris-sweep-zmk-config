@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LS(H)>
+                = <&macro_tap &kp H>
                 , <&macro_tap &kp E>
                 , <&macro_tap &kp R>
                 , <&macro_tap &kp E>
@@ -111,7 +111,7 @@
             &kp N1            &kp N2       &kp N3      &kp N4     &kp N5         &kp N6      &kp N7     &kp N8     &kp N9    &kp N0
         //├────────-------──┼────────---──┼─────────-─┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│                 │             │           │ tab      │ escape   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  DELETE  │
-           &kp LG(GRAVE)     &kp LG(GRAVE) &kp LS(TAB) &kp TAB    &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp DEL
+           &kp LG(LS(GRAVE)) &kp LG(GRAVE) &kp LS(TAB) &kp TAB    &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp DEL
         //├─────────-------─┼──────────---┼──────────-┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│                 │             │           │          │          │   │          │          │          │          │          │
            &trans            &trans        &trans      &trans     &trans         &trans     &trans     &trans     &trans     &trans
