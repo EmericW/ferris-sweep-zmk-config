@@ -74,7 +74,7 @@
                 , <&macro_tap &kp EXCL>
                 ;
         };
-    }
+    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
