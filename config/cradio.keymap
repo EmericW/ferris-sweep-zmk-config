@@ -22,6 +22,69 @@
         };
     };
 
+    macros {
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp E>
+                , <&macro_tap &kp M>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp I>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp W>
+                , <&macro_tap &kp A>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp N>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp Z>
+                , <&macro_tap &kp AT>
+                , <&macro_tap &kp B>
+                , <&macro_tap &kp I>
+                , <&macro_tap &kp T>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp F>
+                , <&macro_tap &kp L>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp V>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp DOT>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp O>
+                , <&macro_tap &kp M>
+                ;
+        };
+
+        // Dummy password used when developing login forms
+        pass: pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LS(H)>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp D>
+                , <&macro_tap &kp I>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp E>
+                , <&macro_tap &kp X>
+                , <&macro_tap &kp 1>
+                , <&macro_tap &kp EXCL>
+                ;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -48,7 +111,7 @@
             &kp N1            &kp N2       &kp N3      &kp N4     &kp N5         &kp N6      &kp N7     &kp N8     &kp N9    &kp N0
         //├────────-------──┼────────---──┼─────────-─┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│                 │             │           │ tab      │ escape   │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  DELETE  │
-           &kp LG(LS(GRAVE)) &kp LG(GRAVE) &kp LS(TAB) &kp TAB    &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp DEL
+           &kp LG(GRAVE)     &kp LG(GRAVE) &kp LS(TAB) &kp TAB    &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp DEL
         //├─────────-------─┼──────────---┼──────────-┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│                 │             │           │          │          │   │          │          │          │          │          │
            &trans            &trans        &trans      &trans     &trans         &trans     &trans     &trans     &trans     &trans
@@ -82,7 +145,7 @@
            &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp F6       &kp F7       &kp F8       &kp F9       &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├─────────--─┼──────--────┼─────────--─┼─────────--─┼──────────┤
         //│          │          │          │          │          │   │            │            │            │            │BOOTLOADER│
-            &kp F11    &kp F12   &caps_word &trans     &trans         &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
+            &kp F11    &kp F12   &caps_word &email     &pass          &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├─────────--─┼───--───────┼─────────--─┼─────────--─┼──────────┤
         //│          │          │          │          │          │   │            │            │            │            │          │
            &sys_reset &trans     &trans    &trans     &trans         &kp C_VOL_DN &kp C_PREV   &kp C_PP     &kp C_NEXT   &kp C_VOL_UP
