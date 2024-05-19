@@ -57,6 +57,7 @@
                 ;
         };
 
+        // Dummy password used when developing login forms
         pass: pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -113,7 +114,7 @@
            &kp LG(LS(GRAVE)) &kp LG(GRAVE) &kp LS(TAB) &kp TAB    &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp DEL
         //├─────────-------─┼──────────---┼──────────-┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│                 │             │           │          │          │   │          │          │          │          │          │
-           &trans            &kp trans     &kp trans   &kp trans  &trans         &trans     &trans     &trans     &trans     &trans
+           &trans            &trans        &trans      &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰─────────-------─┴─────────---─┴──────────-┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                        &trans     &trans         &trans     &trans
         //                                            ╰──────────┴──────────╯   ╰──────────┴──────────╯
